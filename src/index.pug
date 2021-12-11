@@ -1,0 +1,139 @@
+doctype html
+html(lang="ru") 
+    head
+        meta(charset="utf-8")
+        title Home page — QWERy
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="/css/reset.css")
+        link(rel="stylesheet" href="/css/index.css")
+        link(rel="stylesheet" href="/js/libs/gallery.css")
+        script(src="/js/libs/gallery.js")
+    body
+        .page
+            header.header
+                .header__content
+                    a.logo(href="/")
+                        h1.logo__title QWERy
+                    .burger-menu.burger-menu_opened
+                        .burger-menu__content
+                            nav.main-nav.header__center
+                                ul.main-nav__list
+                                    li.main-nav__item
+                                        a.main-nav__link.main-nav__link_active(href="#") Information
+                                    li.main-nav__item
+                                        a.main-nav__link(href="#") About&nbsp;us
+                                    li.main-nav__item
+                                        a.main-nav__link(href="#") Culture
+                            label.search
+                                .search__icon
+                                input.search__form(type="text" placeholder="Search")
+                        button.burger-menu__control
+                    .cover-space__burger
+            .cover-space
+            section.section__main
+                .main-title
+                    span.main-title__summary Explore the Nature Beauty
+                    h1.main-title__text Discover 
+                        span.main-title__text_regular Wonderful Indonesia
+                .social-networks
+                    h3.social-networks__title Follow&nbsp;us
+                    ul.social-networks__list
+                        li.social-networks__item
+                            a.social-networks__link(href="#")
+                                .icon__instagram
+                        li.social-networks__item
+                            a.social-networks__link(href="#")
+                                .icon__twitter
+                        li.social-networks__item
+                            a.social-networks__link(href="#")
+                                .icon__facebook
+                .scroll-down
+                    | Scroll down
+                    .scroll-down__icon.icon__arrow_downward
+            .content
+                section.section.section-cols
+                    img.section-col.section-col__image(src="/images/enjoy.jpg" alt="Mountains")
+                    .section-col.section-col__content
+                        .main-title.main-title_small
+                            span.main-title__summary EAST NUSA TENGGARA
+                            h2.main-title__text Have you enjoyed&nbsp;your holiday?
+                        p You will be&nbsp;amazed if&nbsp;you take part in&nbsp;this sailing Komodo island tour package. So&nbsp;it&nbsp;is&nbsp;also mandatory for you, besides enjoying Komodo tourism on&nbsp;Komodo Island, you also have to&nbsp;taste the marine tourism. The beautiful waters of&nbsp;Komodo will make you meet many travelers from other countries.
+                        a.arrow-link(href="#")
+                            | read more
+                            .arrow-link__icon.icon__arrow_rightward
+                section.section
+                    #gallery.gallery
+                        each val in [1,2,3,4,5]
+                            .gallery__slide(style={'background-image': 'url("/images/gallery.jpg")'})
+                                .gallery__content
+                                    .content_small
+                                        .main-title.main-title_centered.main-title_small
+                                            span.main-title__summary Bromo
+                                            h2.main-title__text Steady your steps, we&nbsp;will climb together!
+                                        p Enjoying the vast expanse of&nbsp;the sea of ​​​​sand, witnessing the splendor of&nbsp;Mount Semeru that soars into the sky, and gazing at&nbsp;the beauty of&nbsp;the sun moving out of&nbsp;its bed or&nbsp;otherwise enjoying the dim twilight from the Bromo ridge is&nbsp;an&nbsp;unforgettable experience when visiting Bromo.
+                                        a.arrow-link.arrow-link_centered(href="#")
+                                            | read more
+                                            .arrow-link__icon.icon__arrow_rightward
+                section.section.section-cols
+                    .section-col.section-col__content
+                        .main-title.main-title_small
+                            span.main-title__summary INDONESIAN CULTURE
+                            h2.main-title__text Our culture here is&nbsp;very friendly to&nbsp;people
+                        p Known for his politeness, manners and gentleness. This becomes a&nbsp;characteristic when they mingle with other tribes and become basic traits that are passed down by&nbsp;their ancestors.
+                        a.arrow-link(href="#")
+                            | read more
+                            .arrow-link__icon.icon__arrow_rightward
+                    img.section-col.section-col__image(src="/images/culture.jpg" alt="Culture")
+                section.section-border
+                    .start
+                        h2.start__title QWERTy
+                        .start__content
+                            h4.start__desc Ready to explore?
+                            button.button Get started
+                footer.footer
+                    .footer__content
+                        .subscribe
+                            h3.subscribe__title Let&rsquo;s go&nbsp;on&nbsp;vacation, Make your day
+                            label.email
+                                input.email__form(type="text" placeholder="Email address")
+                                button.button.email__button
+                                    .button__icon.icon__right
+                        .menu
+                            h4.menu__title Services
+                            ul.menu__list
+                                each link in ['Email Marketing', 'Campaigns', 'Branding', 'Offline']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                        .menu
+                            h4.menu__title About
+                            ul.menu__list
+                                each link in ['Our Story', 'Benefits', 'Team', 'Careers']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                        .menu
+                            h4.menu__title Help
+                            ul.menu__list
+                                each link in ['FAQs', 'Contact Us']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                    .footer__bottom
+                        .footer__terms
+                            a.footer__link(href="#") Terms &amp;&nbsp;Conditions
+                            a.footer__link(href="#") Privacy Policy
+                        ul.social-horisontal
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__facebook
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__twitter
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__instagram
+
+        script(src="/js/index.js")
+
+

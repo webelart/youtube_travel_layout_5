@@ -1,0 +1,97 @@
+.gallery {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0;
+}
+
+    .gallery-line-container {
+        overflow: hidden;
+    }
+
+    .gallery-draggable {
+        cursor: grabbing;
+    }
+
+    .gallery-line {
+        overflow: hidden;
+    }
+
+    .gallery-slide {
+        min-height: 1px;
+        float: left;
+        transform: translateZ(0);
+        overflow: hidden;
+    }
+
+    .gallery-dots {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        margin: 0.4rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    .gallery-dot:hover,
+    .gallery-dot-active {
+        background: #888;
+    }
+
+    .gallery-nav {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        z-index: 4;
+    }
+
+    .gallery-nav-left,
+    .gallery-nav-right {
+        position: absolute;
+        width: 2rem;
+        height: 3rem;
+        border: none;
+        outline: none;
+        text-indent: -1234em;
+        top: 50%;
+        margin-top: -3rem;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .gallery-nav-disabled {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    .gallery-nav-left {
+        background: url('./images/left.svg') no-repeat center;
+        background-size: contain;
+        left: 2rem;
+    }
+
+    .gallery-nav-right {
+        right: 2rem;
+        background: url('./images/right.svg') no-repeat center;
+        background-size: contain;
+    }
+
+@media screen and (max-width: 700px) {
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery-nav {
+        display: none;
+    }
+}
